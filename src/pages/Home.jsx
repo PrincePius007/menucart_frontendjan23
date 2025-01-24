@@ -12,14 +12,19 @@ const Home = () => {
   const handleCloseMenuModal = () => setShowAddMenuModal(false);
 
   const handleAddMenuItem = () => {
-    setShowAddMenuItemModal(true); // Show modal to add menu item
+    setShowAddMenuItemModal(true);
   };
 
   const handleCloseMenuItemModal = () => setShowAddMenuItemModal(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br via-black to-gray-900 p-6 flex items-center justify-center">
-      <div className="w-full  bg-opacity-90  p-8 text-white animate-fadeIn">
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat p-6 flex items-center justify-center"
+      style={{
+        backgroundImage: "url('https://qul.imgix.net/9badc77b-6cda-4a91-9a7e-73a026be8ae0/177679_landscape.jpg')", // Replace with your image URL
+      }}
+    >
+      <div className="w-full bg-opacity-90 p-8 text-white animate-fadeIn">
         {/* Header Section */}
         <div className="text-center mb-10">
           <h1 className="text-5xl font-extrabold text-emerald-40 tracking-wider animate-pulse">
@@ -31,17 +36,17 @@ const Home = () => {
         </div>
 
         {/* Buttons Section */}
-        <div className=" sm:flex-row justify-around items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+        <div className="sm:flex-row justify-around items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
           <button
             onClick={handleAddMenu}
-            className=" sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-60 to-pink-50 text-lg font-semibold text-white rounded-lg shadow-lg hover:shadow-2xl hover:from-purple-700 hover:to-pink-600 transform hover:scale-110 transition-all duration-300"
+            className="sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-60 to-pink-500 text-lg font-semibold text-white rounded-lg shadow-lg hover:shadow-2xl hover:from-purple-700 hover:to-pink-600 transform hover:scale-110 transition-all duration-300"
           >
             Add Menu
           </button>
 
           <button
             onClick={handleAddMenuItem}
-            className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-green-50 to-teal-40 text-lg font-semibold text-white rounded-lg shadow-lg hover:shadow-2xl hover:from-green-600 hover:to-teal-500 transform hover:scale-110 transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-green-500 to-teal-40 text-lg font-semibold text-white rounded-lg shadow-lg hover:shadow-2xl hover:from-green-600 hover:to-teal-500 transform hover:scale-110 transition-all duration-300"
           >
             Add Menu Item
           </button>
@@ -59,9 +64,7 @@ const Home = () => {
       </div>
 
       {/* Add Menu Modal */}
-      {showAddMenuModal && (
-        <AddMenuModal closeModal={handleCloseMenuModal} />
-      )}
+      {showAddMenuModal && <AddMenuModal closeModal={handleCloseMenuModal} />}
 
       {/* Add Menu Item Modal */}
       {showAddMenuItemModal && (

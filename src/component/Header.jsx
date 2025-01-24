@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r from-purple-80 via-indigo-80 to-purple-900 text-white py-4 px-6 shadow-md fixed top-0 w-full z-50">
+    <header className="bg-gradient-to-r from-purple-8 via-indigo-80 to-purple-900 text-white py-4 px-6 shadow-md fixed top-0 w-full z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Logo Section */}
-        <div className="text-3xl font-extrabold tracking-wide text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
+        <div className="text-3xl font-extrabold tracking-wide text-yellow-400 hover:text-yellow-10 transition-colors duration-300">
           MENU CART
         </div>
 
